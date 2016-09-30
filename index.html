@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>DHT11 Temperature Humidity Logging And Prediction by yashwanth-paritala</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">DHT11 Temperature Humidity Logging And Prediction</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging" class="btn">View on GitHub</a>
-      <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <section class="main-content">
-      <h1>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>DHT11 Temperature Humidity Logging And Prediction by yashwanth-paritala</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>DHT11 Temperature Humidity Logging And Prediction</h1>
+        <h2></h2>
+        <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="dht11-data-logging" class="anchor" href="#dht11-data-logging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DHT11 Data Logging</h1>
 
 <h3>
 <a id="objective" class="anchor" href="#objective" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objective</h3>
-
-<hr>
 
 <p>This project results how to log and upload the data into the cloud that results from the DHT11 sensor connected to the Raspberry Pi. 
 Global Warming issue is the increase of Earth’s average surface temperature due to effect of greenhouse gases, 
@@ -40,8 +47,6 @@ safety measures can be taken by people at that area.</p>
 
 <h3>
 <a id="components" class="anchor" href="#components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Components</h3>
-
-<hr>
 
 <ul>
     <li>Raspberry Pi 3 Model B </li>
@@ -58,8 +63,6 @@ safety measures can be taken by people at that area.</p>
 <h3>
 <a id="softwares--libraries" class="anchor" href="#softwares--libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Softwares &amp; Libraries</h3>
 
-<hr>
-
 <ul>
     <li>Raspbian Jessie OS </li>
     <li>Adafruit python package for DHT11 Sensor</li>
@@ -74,23 +77,19 @@ safety measures can be taken by people at that area.</p>
 <h3>
 <a id="block-diagram" class="anchor" href="#block-diagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Block Diagram</h3>
 
-<hr>
-
 <p><img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/block.png" alt="Block Diagram">  </p>
 
 <h3>
 <a id="circult-diagram" class="anchor" href="#circult-diagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Circult Diagram</h3>
 
-<hr>
-
 <p><img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/DHT11_Temp_cloud_schem.jpg" alt="Circult Diagram 1"><br>
-<br>
+<br><br>
 <img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/DHT11_Temp_cloud_bb.jpg" alt="Circult Diagram 2">  </p>
 
 <h2>
 <a id="pre-connection-procedure" class="anchor" href="#pre-connection-procedure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre Connection Procedure</h2>
 
-<hr>
+<p><br></p>
 
 <h3>
 <a id="step-1-prepare-your-sd-card" class="anchor" href="#step-1-prepare-your-sd-card" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Prepare Your SD Card</h3>
@@ -121,8 +120,8 @@ safety measures can be taken by people at that area.</p>
     <li>This software is used for finding the devices connected to the network of your Windows PC along with IP address of the device.</li>
     <li>Open the folder unzipped and double click wnetwatcher.exe</li>
     <li>This application will list the ip addresses of the devices on same network. Here you can identify your  Raspberry Pi ip address.</li>
-    <li>If you can’t find Press “F9” or Go to “options” and select “Advanced options”.Choose your wireless network adapter.  
-![Network Adapter](https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/img.PNG)</li>
+    <li>If you can’t find Press “F9” or Go to “options” and select “Advanced options”.Choose your wireless network adapter.</li>
+<img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/img.PNG" alt="Network Adapter">
     <li>Start scan again. Note the ip address of Raspberry Pi.</li>
     
 </ol>
@@ -179,17 +178,27 @@ safety measures can be taken by people at that area.</p>
 <ol>
     <li>Go to thingspeak.com and create a account.</li> 
     <li>Create a new channel and fill the requirements and save it.</li>
-![Thingspeak](https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/img1.PNG)
+<img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/img1.PNG" alt="Thingspeak">
     <li>Now go to option called API keys of that particular channels. And Note the Write Key of that particular channel.</li>
 </ol>
+        </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging">DHT11 Temperature Humidity Logging And Prediction</a> is maintained by <a href="https://github.com/yashwanth-paritala">yashwanth-paritala</a>.</span>
+        <aside id="sidebar">
+          <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+          <p class="repo-owner"><a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging"></a> is maintained by <a href="https://github.com/yashwanth-paritala">yashwanth-paritala</a>.</p>
 
-    </section>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
   
   </body>
