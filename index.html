@@ -82,8 +82,8 @@ safety measures can be taken by people at that area.</p>
 <h3>
 <a id="circult-diagram" class="anchor" href="#circult-diagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Circult Diagram</h3>
 
-<p>[Circult Diagram 1]()<br>
-[Circult Diagram 2]()  </p>
+<p><img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/DHT11_Temp_cloud_schem.jpg" alt="Circult Diagram 1"><br>
+<img src="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/DHT11_Temp_cloud_bb.jpg" alt="Circult Diagram 2">  </p>
 
 <h2>
 <a id="pre-connection-procedure" class="anchor" href="#pre-connection-procedure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre Connection Procedure</h2>
@@ -96,8 +96,7 @@ safety measures can be taken by people at that area.</p>
     <li>Download the latest version of Raspbian Jessie operating system and unzip the `.img` file.Download it from here. <a href="https://www.raspberrypi.org/downloads/"> CLICK HERE</a> </li>
     <li>Download and install win32diskimager.Download the software from here. <a href="http://sourceforge.net/projects/win32diskimager/">CLICK HERE</a>
 </li> 
-    <li>This Software is used for booting the <b>Raspbian-Jessie os to the sd card</b>
-</li>
+    <li>This Software is used for booting the <b>Raspbian-Jessie</b> os to the sd card</li>
     <li>Take SD card of minimum 8GB class 4, tested up to 32GB and connect to the Windows PC via card reader.</li>
     <li>Open Win32DiskImager.exe.  If  you're  running  Windows  7  or  8,  right  click  on  it  and  choose  "Run  as Administrator" instead. </li>
     <li>If your SD card isn’t detected automatically, click the dropdown menu and select drive letter of your SD card.</li>
@@ -115,13 +114,14 @@ safety measures can be taken by people at that area.</p>
     <li>In your Windows PC move your cursor to bottom left of the monitor and right click your mouse. There in the menu choose “control panel”. Go to sub-options of “Network and Internet” and click “View network status and tasks”. In the left side of the menu. Click “Change adapter settings”.</li>
     <li>Select both connection of your Wi-Fi and Ethernet (Which is connected to the Raspberry Pi) connection. Press CTRL and select both connections. Right click on any of the two connections and click “Bridge connections” and wait for while until your new bridge connection is identified.</li>
     <li>New connection is identified  note the type of Network Adapter used.</li>
-    <li>Download wnetwatcher and unzip the folder inside. Download from here ([CLICK HERE](http://www.nirsoft.net/utils/wnetwatcher.zip))</li>
+    <li>Download wnetwatcher and unzip the folder inside. Download from here. <a href="http://www.nirsoft.net/utils/wnetwatcher.zip"> CLICK HERE </a>
+</li>
     <li>This software is used for finding the devices connected to the network of your Windows PC along with IP address of the device.</li>
     <li>Open the folder unzipped and double click wnetwatcher.exe</li>
     <li>This application will list the ip addresses of the devices on same network. Here you can identify your  Raspberry Pi ip address.</li>
     <li>If you can’t find Press “F9” or Go to “options” and select “Advanced options”.Choose your wireless network adapter.  
     
-    ![Network Adapter]()</li>
+    ![Network Adapter](https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/img.PNG)</li>
     <li>Start scan again. Note the ip address of Raspberry Pi.</li>
     
 </ol>
@@ -141,7 +141,7 @@ safety measures can be taken by people at that area.</p>
 
 <ol>
 
-    <li>Connect pi to your laptop. Start an application putty. It can be downloaded from here. ([CLICK HERE](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)) </li>
+    <li>Connect pi to your laptop. Start an application putty. It can be downloaded from here. <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"> CLICK HERE</a> </li>
     <li>In the host name, write the ip address noted in step 2 or assigned in step 3. Don’t change port number. </li>
     <li>Click ‘Open’. A terminal will open and a message will be displayed. Click on ‘Yes’. If there is an error message ‘Connection Refused’, wait for 1 minute more and try again. If there is an error message ‘No route to host’, the problem is with your ip address. Check it again. </li>
     <li>After connecting to the terminal, it will ask for login name. Enter ‘pi’ as login id and ‘raspberry’ as your password. This is set by default. </li>
@@ -160,8 +160,8 @@ safety measures can be taken by people at that area.</p>
     `sudo apt-get install python-rpi.gpio`  
 
     <li>Next the process for installing the adafruit python DHT library from github.</li>
-    <li>This is link of the library in github. (https://github.com/adafruit/Adafruit_Python_DHT)</li>
-    <li>This is the link for cloning into your pc.(https://github.com/adafruit/Adafruit_Python_DHT.git)</li>
+    <li>This is link of the library in github. (<a href="https://github.com/adafruit/Adafruit_Python_DHT">https://github.com/adafruit/Adafruit_Python_DHT</a>)</li>
+    <li>This is the link for cloning into your pc.(<a href="">https://github.com/adafruit/Adafruit_Python_DHT.git</a>)</li>
     <li>Commands for installing adafruit DHT11 python library.</li>
 
     `sudo apt-get update\
@@ -177,7 +177,7 @@ safety measures can be taken by people at that area.</p>
 <ol>
     <li>Go to thingspeak.com and create a account.</li> 
     <li>Create a new channel and fill the requirements and save it.  
-    ![Screenshot Thingspeak]()</li>
+    ![Screenshot Thingspeak](https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/raw/master/images/img1.PNG)</li>
     <li>Now go to option called API keys of that particular channels. And Note the Write Key of that particular channel.</li>
 </ol>
         </section>
