@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>DHT11 Temperature Humidity Logging And Prediction by yashwanth-paritala</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>DHT11 Temperature Humidity Logging And Prediction</h1>
+        <h2></h2>
+        <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="dht11-data-logging" class="anchor" href="#dht11-data-logging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DHT11 Data Logging</h1>
+
+<h3>
+<a id="objective" class="anchor" href="#objective" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objective</h3>
+
+<p>This project results how to log and upload the data into the cloud that results from the DHT11 sensor connected to the Raspberry Pi. 
+Global Warming issue is the increase of Earth’s average surface temperature due to effect of greenhouse gases, 
+such as carbon dioxide emissions from burning fossil fuels or from deforestation, 
+which trap heat that would otherwise escape from Earth. This may cause severe problems and diseases to human beings. 
+As prevention we can collect the data of the temperature variations and humidity at that particular area 
+throughout the year and updating the data to the cloud using the cloud service such as <a href="www.thingspeak.com">ThinkSpeak</a>
+and by getting the data from the cloud service, 
+can analyze the data using Data Analytics and predict future conditions of temperature at that particular area. 
+If prediction tells any severe situations of environment at that particular area, 
+safety measures can be taken by people at that area.</p>
+
+<h3>
+<a id="components" class="anchor" href="#components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Components</h3>
+
+<ul>
+    <li>Raspberry Pi 3 Model B </li>
+    <li>DHT11 Sensor </li>
+    <li>Jumper Wires (Female to Male)</li>
+    <li>Breadboard</li>
+    <li>Ethernet cable</li>
+    <li>SD card (Minimum 8GB class 4 upto 32 GB )</li>
+    <li>SDHC Card Adapter for MicroSD card</li>
+    <li>10k Resistor</li>
+    <li>USB Power Supply</li>
+</ul>
+
+<h3>
+<a id="softwares--libraries" class="anchor" href="#softwares--libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Softwares &amp; Libraries</h3>
+
+<ul>
+    <li>Raspbian Jessie OS </li>
+    <li>Adafruit python package for DHT11 Sensor</li>
+    <li>Python-dev Library</li>
+    <li>Putty</li>
+    <li>Win32diskimager</li>
+    <li>Thingspeak (cloud service)</li>
+    <li>Wnetwatcher</li>
+    <li>Microsoft Excel</li>
+</ul>
+
+<h3>
+<a id="block-diagram" class="anchor" href="#block-diagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Block Diagram</h3>
+
+<p>[Block Diagram]()  </p>
+
+<h3>
+<a id="circult-diagram" class="anchor" href="#circult-diagram" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Circult Diagram</h3>
+
+<p>[Circult Diagram 1]()<br>
+[Circult Diagram 2]()  </p>
+
+<h2>
+<a id="pre-connection-procedure" class="anchor" href="#pre-connection-procedure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre Connection Procedure</h2>
+
+<h3>
+<a id="step-1-prepare-your-sd-card" class="anchor" href="#step-1-prepare-your-sd-card" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1: Prepare Your SD Card</h3>
+
+<ol>
+
+    <li>Download the latest version of Raspbian Jessie operating system and unzip the `.img` file.Download it from here. <a href="https://www.raspberrypi.org/downloads/"> CLICK HERE</a> </li>
+    <li>Download and install win32diskimager.Download the software from here. <a href="http://sourceforge.net/projects/win32diskimager/">CLICK HERE</a>
+</li> 
+    <li>This Software is used for booting the <b>Raspbian-Jessie os to the sd card</b>
+</li>
+    <li>Take SD card of minimum 8GB class 4, tested up to 32GB and connect to the Windows PC via card reader.</li>
+    <li>Open Win32DiskImager.exe.  If  you're  running  Windows  7  or  8,  right  click  on  it  and  choose  "Run  as Administrator" instead. </li>
+    <li>If your SD card isn’t detected automatically, click the dropdown menu and select drive letter of your SD card.</li>
+    <li>In the image file section of the application,click the folder icon and choose  disk image of raspbian jessie os `.img` file. </li>  
+    <li>Click write button and wait for Win32DiskImager to write image file into the SD card.</li>
+</ol>
+
+<h3>
+<a id="step-2-finding-ip-address-of-raspberry-pi" class="anchor" href="#step-2-finding-ip-address-of-raspberry-pi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2: Finding IP address of Raspberry Pi</h3>
+
+<ol>
+    <li>Enable DHCP on your router.</li>
+    <li>Connect your Windows PC to the router.</li>
+    <li>Connect your Raspberry Pi to your PC via Ethernet cable with a proper SD card inserted and Power Supply. </li>
+    <li>In your Windows PC move your cursor to bottom left of the monitor and right click your mouse. There in the menu choose “control panel”. Go to sub-options of “Network and Internet” and click “View network status and tasks”. In the left side of the menu. Click “Change adapter settings”.</li>
+    <li>Select both connection of your Wi-Fi and Ethernet (Which is connected to the Raspberry Pi) connection. Press CTRL and select both connections. Right click on any of the two connections and click “Bridge connections” and wait for while until your new bridge connection is identified.</li>
+    <li>New connection is identified  note the type of Network Adapter used.</li>
+    <li>Download wnetwatcher and unzip the folder inside. Download from here ([CLICK HERE](http://www.nirsoft.net/utils/wnetwatcher.zip))</li>
+    <li>This software is used for finding the devices connected to the network of your Windows PC along with IP address of the device.</li>
+    <li>Open the folder unzipped and double click wnetwatcher.exe</li>
+    <li>This application will list the ip addresses of the devices on same network. Here you can identify your  Raspberry Pi ip address.</li>
+    <li>If you can’t find Press “F9” or Go to “options” and select “Advanced options”.Choose your wireless network adapter.  
+    
+    ![Network Adapter]()</li>
+    <li>Start scan again. Note the ip address of Raspberry Pi.</li>
+    
+</ol>
+
+<h3>
+<a id="step-3-assigning-static-ip-address--instead-of-step-2-" class="anchor" href="#step-3-assigning-static-ip-address--instead-of-step-2-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 3: Assigning static IP address ( Instead of step 2 )</h3>
+
+<ol>
+    <li>Connect the pi with your laptop using Ethernet cable. Now, on your pc open command prompt by typing ‘cmd’ in start menu. Write ‘ipconfig’ to show the list of connections. Note down the ipv4 address under Ethernet.  It should be something like this `192.169.254.12` </li>
+    <li>Remove the power cable. Remove SD card and insert in your laptop. Open the drive of your SD card. Find and open ‘cmdline.txt’ using notepad++. </li>
+    <li>At the end of the first line type ip=`192.169.254.X` where x is any number from 0 to 255 and others are the same as the ipv4 address you noted.</li>
+    <li>This one line of text should be followed by one blank line. Make sure there are only 2 lines. This is an important step. If your pi doesn’t get connected in next steps for some reason check this step first. Save the ‘cmdline.txt’ file. Remove your SD card and insert it in pi. </li>
+</ol>
+
+<h3>
+<a id="step-4-configuring-putty" class="anchor" href="#step-4-configuring-putty" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 4: Configuring putty</h3>
+
+<ol>
+
+    <li>Connect pi to your laptop. Start an application putty. It can be downloaded from here. ([CLICK HERE](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)) </li>
+    <li>In the host name, write the ip address noted in step 2 or assigned in step 3. Don’t change port number. </li>
+    <li>Click ‘Open’. A terminal will open and a message will be displayed. Click on ‘Yes’. If there is an error message ‘Connection Refused’, wait for 1 minute more and try again. If there is an error message ‘No route to host’, the problem is with your ip address. Check it again. </li>
+    <li>After connecting to the terminal, it will ask for login name. Enter ‘pi’ as login id and ‘raspberry’ as your password. This is set by default. </li>
+    <li>You will get access to your pi.</li>
+</ol>
+
+<h3>
+<a id="step-5-configuring-gpio-and-installing-adafruit-library" class="anchor" href="#step-5-configuring-gpio-and-installing-adafruit-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 5: Configuring GPIO and Installing Adafruit library</h3>
+
+<ol>
+    <li>To program the GPIO ports in Python, we need to install a library called Rpi.GPIO.</li> 
+    <li>This install process can be done through commands in putty.</li>
+
+    `sudo apt-get update`  
+    `sudo apt-get install python-dev`  
+    `sudo apt-get install python-rpi.gpio`  
+
+    <li>Next the process for installing the adafruit python DHT library from github.</li>
+    <li>This is link of the library in github. (https://github.com/adafruit/Adafruit_Python_DHT)</li>
+    <li>This is the link for cloning into your pc.(https://github.com/adafruit/Adafruit_Python_DHT.git)</li>
+    <li>Commands for installing adafruit DHT11 python library.</li>
+
+    `sudo apt-get update\
+    sudo apt-get install git\  
+    git clone https://github.com/adafruit/Adafruit_Python_DHT.git\
+    cd Adafruit-Raspberry-Pi-Python-Code\
+    sudo python setup.py install`
+</ol>
+
+<h3>
+<a id="step-6-creating-a-channel-in-thingspeak-cloud-service" class="anchor" href="#step-6-creating-a-channel-in-thingspeak-cloud-service" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 6: Creating a channel in Thingspeak cloud service</h3>
+
+<ol>
+    <li>Go to thingspeak.com and create a account.</li> 
+    <li>Create a new channel and fill the requirements and save it.  
+    ![Screenshot Thingspeak]()</li>
+    <li>Now go to option called API keys of that particular channels. And Note the Write Key of that particular channel.</li>
+</ol>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/yashwanth-paritala/DHT11_Cloud_Datalogging"></a> is maintained by <a href="https://github.com/yashwanth-paritala">yashwanth-paritala</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
