@@ -193,10 +193,13 @@ FORECAST is time series forecasting functions can be used to predict future valu
 <h3>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description:</h3>
 
-<p>Calculates, or predicts, a future value by using existing values. The predicted value is a y-value for a given x-value. The known values are existing x-values and y-values, and the new value is predicted by using linear regression. You can use this function to predict future sales, inventory requirements, or consumer trends.
-<b>Syntax:</b><br>
-FORECAST(x, known_y's, known_x's)
-The FORECAST function syntax has the following arguments:</p>
+<p>Calculates, or predicts, a future value by using existing values. The predicted value is a y-value for a given x-value. The known values are existing x-values and y-values, and the new value is predicted by using linear regression. You can use this function to predict future sales, inventory requirements, or consumer trends.  </p>
+
+<p><b>Syntax:</b>  </p>
+
+<pre>FORECAST(x, known_y's, known_x's)</pre>
+
+<p>The FORECAST function syntax has the following arguments:</p>
 
 <ul>
     <li>X    Required. The data point for which you want to predict a value.</li>
@@ -204,27 +207,13 @@ The FORECAST function syntax has the following arguments:</p>
     <li>Known_x's    Required. The independent array or range of data.</li>
 </ul>  
 
-<p><b>Remarks:</b></p>
+<p><br></p>
 
-<ul>
-    <li>If x is nonnumeric, FORECAST returns the #VALUE! error value.</li>
-    <li>If known_y's and known_x's are empty or contain a different number of data points, FORECAST returns the #N/A error value.</li>
-    <li>If the variance of known_x's equals zero, then FORECAST returns the #DIV/0! error value.</li>
-    <li>The equation for FORECAST is a+bx, where:
-    <img src="https://support.content.office.net/en-us/media/9e78d188-aec3-46dc-bc3b-c593e5304937.gif" alt="a=y-bx">
-    and:
-    <img src="https://support.content.office.net/en-us/media/8e8ca310-3d42-4762-b3be-8dde84e87758.gif" alt="Formula">
-    and where x and y are the sample means AVERAGE(known_x's) and AVERAGE(known y's).
-    </li>
-</ul>
+<pre>------------------------Predict to Get Benefit----------------------------</pre>
 
 <p><br>
-<br></p>
-
-<pre>------------------------<em>Predict to Survive</em>-------------------------</pre>
-
-<p><br>
-<br></p>
+<br>
+-Powered By <b><a href="http://www.iotalliance.in/">IoT Alliance</a></b> ,SRM University,KTR Campus,Chennai.  </p>
         </section>
 
         <aside id="sidebar">
