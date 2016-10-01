@@ -17,3 +17,5 @@ To run the file
     sudo python DHT_cloud_datalog.py
 
 Enjoy  :)
+
+-Powered By IoT Alliance<www.iotalliance.in>, SRM University, KTR Campus, Chennai
