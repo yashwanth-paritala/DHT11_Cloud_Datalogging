@@ -18,4 +18,4 @@ To run the file
 
 Enjoy  :)
 
--Powered By IoT Alliance<www.iotalliance.in>, SRM University, KTR Campus, Chennai
+-Powered By Paritala Yashwanth,IoT Alliance(www.iotalliance.in), SRM University, KTR Campus, Chennai
