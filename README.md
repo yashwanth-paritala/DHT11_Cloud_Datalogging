@@ -4,6 +4,9 @@ Introduction
 
 In this project you’re going to log the data and upload the data into the cloud that results from the DHT11 sensor connected to the Raspberry Pi.Collecting the data of the temperature variations and humidity at that particular area throughout the year and updating the data to the cloud using the cloud service such as Thingspeak (www.thingspeak.com) and you can get the data from the cloud service, we can analyze the data using Data Analytics and predict future conditions of temperature at that particular area. If prediction tells any severe situations of environment at that particular area, we can inform some safety measures to the people at that area.
 
+Follow this link for step by step installation:
+<a href="https://yashwanth-paritala.github.io/DHT11_Cloud_Datalogging/">https://yashwanth-paritala.github.io/DHT11_Cloud_Datalogging/</a>
+     
 Commands for getting this code in to Raspberry Pi:
   
       sudo apt-get update
